@@ -1,4 +1,4 @@
-package br.com.ifba.clinte.dao;
+package br.com.ifba.cliente.dao;
 
 import br.com.ifba.infrastructure.dao.IBaseDao;
 import br.com.ifba.cliente.model.Cliente;

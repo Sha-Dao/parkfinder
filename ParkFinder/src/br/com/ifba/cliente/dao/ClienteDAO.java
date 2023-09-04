@@ -1,4 +1,4 @@
-package br.com.ifba.clinte.dao;
+package br.com.ifba.cliente.dao;
 
 import br.com.ifba.infrastructure.dao.BaseDao;
 import br.com.ifba.infrastructure.util.Session;
