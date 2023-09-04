@@ -25,7 +25,7 @@ public class VagaService implements IVagaService {
     }
 
     @Override
-    public List<Vaga> findAllVagas() {
+    public List<Vaga> findAllVaga() {
         return vagaDAO.findAll();
     }
 
