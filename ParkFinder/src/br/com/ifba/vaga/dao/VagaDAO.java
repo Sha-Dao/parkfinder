@@ -12,6 +12,6 @@ import br.com.ifba.infrastructure.dao.BaseDao;
  *
  * @author santo
  */
-public class VagaDAO extends BaseDao<Vaga> implements IVagaDAo{
+public class VagaDAO extends BaseDao<Vaga> implements IVagaDAO{
     
 }

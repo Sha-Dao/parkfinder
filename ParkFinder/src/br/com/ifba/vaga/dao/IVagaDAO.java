@@ -11,6 +11,6 @@ import br.com.ifba.vaga.model.Vaga;
  *
  * @author santo
  */
-public interface IVagaDAo extends IBaseDao<Vaga>{
+public interface IVagaDAO extends IBaseDao<Vaga>{
     
 }
