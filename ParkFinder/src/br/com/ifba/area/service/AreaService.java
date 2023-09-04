@@ -39,13 +39,5 @@ public class AreaService implements IAreaService {
         return areaDAO.findAll();
     }
 
-    @Override
-    public boolean checkLoginArea(String username, String password) {
-        return areaDAO.checkLogin(username, password);
-    }
-
-    @Override
-    public boolean findByUsername(String username) {
-        return areaDAO.findByUsername(username);
-    }
+    
 }
