@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.ifba.area.dao;
 
-/**
- *
- * @author Dani
- */
-public class AreaDAO {
-    
+import br.com.ifba.infrastructure.dao.BaseDao;
+import br.com.ifba.area.model.Area;
+import javax.persistence.Query;
+
+public class AreaDAO extends BaseDao<Area> implements IAreaDAO {
+
+    @Override
+    public Area saveArea(Area area) {
+        return save(area);
+    }
+
+    @Override
+    public Area deleteArea(Area area) {
+        return delete(area);
+    }
+
+    @Override
+    public Area updateArea(Area area) {
+        return update(area);
+    }
+
+    @Override
+    public Area[] findAllArea() {
+        String sql = "SELECT a FROM Area AS a";
+        Query query = entityManager.createQuery(sql);
+        return query.getResultList().toArray(new Area[0]);
+    }
 }
+
