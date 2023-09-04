@@ -25,7 +25,7 @@ public class AreaDAO extends BaseDao<Area> implements IAreaDAO {
     public Area[] findAllArea() {
         String sql = "SELECT a FROM Area AS a";
         Query query = entityManager.createQuery(sql);
-        return query.getResultList().toArray(new Area[0]);
+        return (Area[]) query.getResultList().toArray(new Area[0]);
     }
 }
 
