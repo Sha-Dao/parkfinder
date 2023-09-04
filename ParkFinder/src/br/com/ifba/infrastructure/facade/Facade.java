@@ -1,9 +1,9 @@
 package br.com.ifba.infrastructure.facade;
 
-import br.com.ifba.usuario.model.Usuario;
-import br.com.ifba.usuario.service.IUsuarioService;
-import br.com.ifba.usuario.service.UsuarioService;
+import br.com.ifba.cliente.model.Cliente;
+import br.com.ifba.cliente.service.ClienteService;
 import java.util.List;
+import br.com.ifba.cliente.service.IClienteService;
 
 
 public class Facade implements IFacade {
@@ -37,27 +37,27 @@ public class Facade implements IFacade {
 //    }
 
     
-    //USUARIO
-    private final IUsuarioService usuarioService = new UsuarioService();
+    //CLIENTE
+    private final IClienteService usuarioService = new ClienteService();
 
     
     @Override
-    public Usuario saveUsuario(Usuario usuario) {
+    public Cliente saveUsuario(Cliente usuario) {
         return usuarioService.saveUsuario(usuario);
     }
 
     @Override
-    public void deleteUsuario(Usuario usuario) {
+    public void deleteUsuario(Cliente usuario) {
         usuarioService.deleteUsuario(usuario);
     }
 
     @Override
-    public Usuario updateUsuario(Usuario usuario) {
+    public Cliente updateUsuario(Cliente usuario) {
         return usuarioService.updateUsuario(usuario);
     }
 
     @Override
-    public List<Usuario> findAllUsuario() {
+    public List<Cliente> findAllUsuario() {
         return usuarioService.findAllUsuario();
     }
 

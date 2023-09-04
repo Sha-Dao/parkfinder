@@ -1,6 +1,6 @@
 package br.com.ifba.infrastructure.facade;
 
-import br.com.ifba.usuario.model.Usuario;
+import br.com.ifba.cliente.model.Cliente;
 import java.util.List;
 
 
@@ -14,10 +14,10 @@ public interface IFacade {
 //    public List<Pessoa> findByNamePessoa(String name);
     
     //USUARIO
-    public Usuario saveUsuario(Usuario usuario);
-    public void deleteUsuario(Usuario usuario);
-    public Usuario updateUsuario(Usuario usuario);
-    public List<Usuario> findAllUsuario();
+    public Cliente saveUsuario(Cliente usuario);
+    public void deleteUsuario(Cliente usuario);
+    public Cliente updateUsuario(Cliente usuario);
+    public List<Cliente> findAllUsuario();
     public boolean checkLoginUsuario(String username, String password);
     public boolean findByUsernameUsuario(String username);
     
