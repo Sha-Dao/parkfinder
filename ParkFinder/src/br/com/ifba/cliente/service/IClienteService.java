@@ -6,11 +6,11 @@ import java.util.List;
 public interface IClienteService {
     
     
-    public Cliente saveUsuario(Cliente usuario);
-    public void deleteUsuario(Cliente usuario);
-    public Cliente updateUsuario(Cliente usuario);
-    public List<Cliente> findAllUsuario();
-    public boolean checkLoginUsuario(String username, String password);
+    public Cliente saveCliente(Cliente usuario);
+    public void deleteCliente(Cliente usuario);
+    public Cliente updateCliente(Cliente usuario);
+    public List<Cliente> findAllCliente();
+    public boolean checkLoginCliente(String username, String password);
     public boolean findByUsername(String username);
     
 }
