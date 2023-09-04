@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "Usuario")
+@Table(name = "Cliente")
 public class Cliente extends PersistenceEntity{
     
     String nome;
