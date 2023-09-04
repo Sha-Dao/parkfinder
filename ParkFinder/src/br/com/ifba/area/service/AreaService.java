@@ -9,6 +9,6 @@ package br.com.ifba.area.service;
  *
  * @author rafael
  */
-public class ClienteService {
+public class AreaService {
     
 }
