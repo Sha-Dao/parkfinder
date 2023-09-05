@@ -9,9 +9,9 @@ public class ClienteDAO extends BaseDao<Cliente> implements IClienteDAO{
 
     @Override
     public boolean checkLogin(String username, String password) {
-        String sql = "SELECT u FROM Usuario AS u WHERE u.login = :login AND u.senha = :senha";
+        String sql = "SELECT u FROM Cliente AS u WHERE u.email = :email AND u.senha = :senha";
         Query query = entityManager.createQuery(sql);
-        query.setParameter("login", username);
+        query.setParameter("email", username);
         query.setParameter("senha", password);
         if(!query.getResultList().isEmpty()){
             Session.setUserName(username);
@@ -23,7 +23,7 @@ public class ClienteDAO extends BaseDao<Cliente> implements IClienteDAO{
 
     @Override
     public boolean findByUsername(String username) {
-        String sql = "SELECT u FROM Usuario AS u WHERE u.login = :login";
+        String sql = "SELECT u FROM Cliente AS u WHERE u.email = :email";
         Query query = entityManager.createQuery(sql);
         query.setParameter("login", username);
         if(!query.getResultList().isEmpty()){

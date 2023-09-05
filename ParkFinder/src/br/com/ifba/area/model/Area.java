@@ -30,6 +30,7 @@ public class Area extends PersistenceEntity {
         this.latitude = latitude;
         this.longitude = longitude;
     }
+    
 
     public String getNome() {
         return nome;

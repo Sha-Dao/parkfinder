@@ -11,10 +11,6 @@ import javax.persistence.Table;
 @Table(name = "Vaga")
 public class Vaga extends PersistenceEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
     private Long latitude;
     private Long longitude;
     private Boolean ocupado;
@@ -29,6 +25,9 @@ public class Vaga extends PersistenceEntity {
         this.idArea = idArea;
     }
 
+    public Vaga(){
+    }
+    
 
     public Long getLatitude() {
         return latitude;
