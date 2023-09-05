@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Area")
 public class Area extends PersistenceEntity {
-    private String nome;
     private String descricao;
     private Double latitude;
     private Double longitude;
@@ -24,21 +23,14 @@ public class Area extends PersistenceEntity {
     public Area() {
     }
 
-    public Area(String nome, String descricao, Double latitude, Double longitude) {
-        this.nome = nome;
+    public Area(String descricao, Double latitude, Double longitude) {
         this.descricao = descricao;
         this.latitude = latitude;
         this.longitude = longitude;
     }
     
 
-    public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public String getDescricao() {
         return descricao;
