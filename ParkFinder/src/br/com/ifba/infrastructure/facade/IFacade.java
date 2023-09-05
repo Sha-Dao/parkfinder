@@ -1,24 +1,31 @@
 package br.com.ifba.infrastructure.facade;
 
 import br.com.ifba.cliente.model.Cliente;
+import br.com.ifba.vaga.model.Vaga;
+import br.com.ifba.area.model.Area;
 import java.util.List;
 
-
 public interface IFacade {
-    
-    //PESSOA
-//    public Pessoa savePessoa(Pessoa pessoa);
-//    public void deletePessoa(Pessoa pessoa);
-//    public Pessoa updatePessoa(Pessoa pessoa);
-//    public List<Pessoa> findAllPessoa();
-//    public List<Pessoa> findByNamePessoa(String name);
-    
-    //USUARIO
-    public Cliente saveUsuario(Cliente usuario);
-    public void deleteUsuario(Cliente usuario);
-    public Cliente updateUsuario(Cliente usuario);
-    public List<Cliente> findAllUsuario();
-    public boolean checkLoginUsuario(String username, String password);
-    public boolean findByUsernameUsuario(String username);
-    
+    // Cliente
+    Cliente saveCliente(Cliente cliente);
+    void deleteCliente(Cliente cliente);
+    Cliente updateCliente(Cliente cliente);
+    List<Cliente> findAllCliente();
+    boolean checkLoginCliente(String username, String password);
+    boolean findByUsernameCliente(String username);
+
+    // Vaga
+    void saveVaga(Vaga vaga);
+    void deleteVaga(Vaga vaga);
+    Vaga updateVaga(Vaga vaga);
+    void manipularEstadoVaga(Vaga vaga);
+    List<Vaga> findAllVaga();
+
+    // Área
+    Area saveArea(Area area);
+    void deleteArea(Area area);
+    Area updateArea(Area area);
+    List<Area> findAllArea();
+
+
 }
