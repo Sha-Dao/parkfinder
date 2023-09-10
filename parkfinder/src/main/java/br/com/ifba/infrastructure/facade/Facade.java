@@ -11,15 +11,16 @@ import br.com.ifba.area.service.AreaService;
 import br.com.ifba.area.service.IAreaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
-@Controller
+@Component
 public class Facade implements IFacade {
 
 
     //CLIENTE
     @Autowired
-    private  ClienteService clienteService;
+    private  IClienteService clienteService;
     
     @Override
    public Cliente saveCliente(Cliente cliente) {

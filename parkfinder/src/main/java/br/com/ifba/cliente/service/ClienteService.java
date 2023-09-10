@@ -38,18 +38,31 @@ public class ClienteService implements IClienteService{
         return usuarioDAO.findAll();
     }
 
-
     @Override
-    public boolean checkLoginCliente(String email, String senha) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'checkLoginCliente'");
+    public boolean findByUsername(String email) {
+      Cliente cliente = usuarioDAO.findByUsername(email);
+
+        if (cliente.getId()!=null){
+            return true;
+            
+        }else{
+            return false;
+        }
     }
 
 
     @Override
-    public boolean findByUsername(String email) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findByUsername'");
+    public boolean checkLoginCliente(String email, String senha) {
+        Cliente cliente = usuarioDAO.checkLogin(email, senha);
+
+        if (cliente.getId()!=null){
+            return true;
+
+        }else{
+            return false;
+        }
+
+        
     }
 
   

@@ -6,7 +6,6 @@ package br.com.ifba;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -14,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @author j_ped
  */
 
-@ComponentScan(basePackages = {"br.com.ifba.cliente"})
+
 @Configuration
 @SpringBootApplication
 public class ParkfinderApplication {

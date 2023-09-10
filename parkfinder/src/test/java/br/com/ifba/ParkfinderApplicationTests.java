@@ -1,4 +1,4 @@
-package com.ifba;
+package br.com.ifba;
 
 
 import org.junit.jupiter.api.Test;
