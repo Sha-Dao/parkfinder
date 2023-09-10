@@ -8,8 +8,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IClienteDAO extends JpaRepository<Cliente, Long>{
-    
-    public boolean checkLogin(String username, String password);
-    public boolean findByUsername(String username);
+    /* 
+     * ESSA PARTE PRECISA SER RECONFIGURADA
+     * 
+     *   public boolean checkLogin(String email, String senha);
+         public boolean findByUsername(String email);
+     */
+  
  
 }

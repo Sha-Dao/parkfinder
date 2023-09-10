@@ -25,6 +25,7 @@ public class Cliente extends PersistenceEntity implements Serializable{
         this.latitude = latitude;
         this.longitude = longitude;
     }
+    public Cliente(){}
 
     public String getNome() {
         return nome;

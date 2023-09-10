@@ -10,14 +10,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClienteService implements IClienteService{
     
-
+    @Autowired
     private IClienteDAO usuarioDAO;
     
      public ClienteService() {
   
     }
 
-    @Autowired
+    
     @Override
     public Cliente saveCliente(Cliente usuario) {
         return usuarioDAO.save(usuario);
@@ -38,15 +38,22 @@ public class ClienteService implements IClienteService{
         return usuarioDAO.findAll();
     }
 
-    @Override
-    public boolean checkLoginCliente(String username, String password) {
-        return usuarioDAO.checkLogin(username, password);
-    }
 
     @Override
-    public boolean findByUsername(String username) {
-        return usuarioDAO.findByUsername(username);
+    public boolean checkLoginCliente(String email, String senha) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'checkLoginCliente'");
     }
+
+
+    @Override
+    public boolean findByUsername(String email) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'findByUsername'");
+    }
+
+  
+
 
 
     
