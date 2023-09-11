@@ -23,7 +23,7 @@ public class Facade implements IFacade {
     private  IClienteService clienteService;
     
     @Override
-   public Cliente saveCliente(Cliente cliente) {
+    public Cliente saveCliente(Cliente cliente) {
         return clienteService.saveCliente(cliente);
         
 }
@@ -44,12 +44,12 @@ public class Facade implements IFacade {
     }
 
     @Override
-    public boolean checkLoginCliente(String username, String password) {
+    public Cliente checkLoginCliente(String username, String password) {
         return clienteService.checkLoginCliente(username, password);
     }
 
     @Override
-    public boolean findByUsernameCliente(String username) {
+    public Cliente findByUsernameCliente(String username) {
         return clienteService.findByUsername(username);
     }
 

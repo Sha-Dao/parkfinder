@@ -12,7 +12,7 @@ public interface IClienteService {
     public void deleteCliente(Cliente usuario);
     public Cliente updateCliente(Cliente usuario);
     public List<Cliente> findAllCliente();
-    public boolean checkLoginCliente(String email, String senha);
-    public boolean findByUsername(String email);
+    public Cliente checkLoginCliente(String email, String senha);
+    public Cliente findByUsername(String email);
     
 }

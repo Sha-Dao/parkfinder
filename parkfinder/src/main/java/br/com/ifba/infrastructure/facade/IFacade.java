@@ -11,8 +11,8 @@ public interface IFacade {
     void deleteCliente(Cliente cliente);
     Cliente updateCliente(Cliente cliente);
     List<Cliente> findAllCliente();
-    boolean checkLoginCliente(String username, String password);
-    boolean findByUsernameCliente(String username);
+    Cliente checkLoginCliente(String username, String password);
+    Cliente findByUsernameCliente(String username);
 
     // Vaga
     void saveVaga(Vaga vaga);
