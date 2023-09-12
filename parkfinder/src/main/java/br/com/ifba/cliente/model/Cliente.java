@@ -13,12 +13,12 @@ public class Cliente extends PersistenceEntity implements Serializable{
     private String nome;
     private String email;
     private String senha;
-    private Long latitude;
-    private Long longitude;
+    private double latitude;
+    private double longitude;
 
     
     
-    public Cliente(String nome, String email, String senha, Long latitude, Long longitude) {
+    public Cliente(String nome, String email, String senha, double latitude, double longitude) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
@@ -51,19 +51,19 @@ public class Cliente extends PersistenceEntity implements Serializable{
         this.senha = senha;
     }
 
-    public Long getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Long latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public Long getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Long longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 

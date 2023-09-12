@@ -17,13 +17,13 @@ import javax.persistence.Table;
 @Table(name = "Area")
 public class Area extends PersistenceEntity {
     private String descricao;
-    private Long latitude;
-    private Long longitude;
+    private double latitude;
+    private double longitude;
 
     public Area() {
     }
 
-    public Area(String descricao, Long latitude, Long longitude) {
+    public Area(String descricao, double latitude, double longitude) {
         this.descricao = descricao;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -40,19 +40,19 @@ public class Area extends PersistenceEntity {
         this.descricao = descricao;
     }
 
-    public Long getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Long latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public Long getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Long longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 }
