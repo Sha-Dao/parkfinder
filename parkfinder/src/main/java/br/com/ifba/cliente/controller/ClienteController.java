@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 /**
  *
  * @author j_ped
@@ -36,23 +35,13 @@ public class ClienteController {
     public List <Cliente> cliente(){
         return (List<Cliente>) ifacadedao.findAllCliente();
     }
-    
 
     @PostMapping("/cliente")
-    public ResponseEntity<String>  salvar(@RequestBody Cliente cliente){
-        
-        List<Cliente> clientes = (List<Cliente>) ifacadedao.findByUsernameCliente(cliente.getEmail());
-         
-        
-        if (clientes != null){
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("");
-        }else{
-            ifacadedao.saveCliente(cliente);
-        }
-        return ResponseEntity.ok("ok");
-    }
-    
+    public Cliente salvar(@RequestBody Cliente cliente){
+        Cliente clientenovo = ifacadedao.saveCliente(cliente);
+        return clientenovo;
 
+    }
     
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody Cliente cliente) {
@@ -67,6 +56,5 @@ public class ClienteController {
         }
     }
 
-        }
-
-
+    
+}
