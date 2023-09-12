@@ -12,8 +12,6 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author j_ped
  */
-
-
 @Configuration
 @SpringBootApplication
 public class ParkfinderApplication {

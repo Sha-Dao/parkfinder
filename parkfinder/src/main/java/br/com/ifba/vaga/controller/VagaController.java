@@ -30,13 +30,7 @@ public class VagaController {
        
     @GetMapping()
     public List <Vaga> vaga(){
-        Vaga vaga1 = new Vaga(-11.303185, -41.857178, false, "normal", 10);
-        ifacadedao.saveVaga(vaga1);
-        Vaga vaga2 = new Vaga(-11.303253, -41.856966, false, "normal", 10);
-        ifacadedao.saveVaga(vaga2);
-        Vaga vaga3 = new Vaga(-11.303372, -41.856902, false, "normal", 10);
-        ifacadedao.saveVaga(vaga3);
-        
+    
         return (List<Vaga>) ifacadedao.findAllVaga();
     }
 }
