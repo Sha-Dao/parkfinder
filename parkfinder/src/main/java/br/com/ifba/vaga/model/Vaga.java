@@ -11,37 +11,38 @@ import javax.persistence.Table;
 @Table(name = "Vaga")
 public class Vaga extends PersistenceEntity {
 
-    private Long latitude;
-    private Long longitude;
+    private double latitude;
+    private double longitude;
     private Boolean ocupado;
     private String tipo;
     private Integer idArea;
 
-    public Vaga(Long latitude, Long longitude, Boolean ocupado, String tipo, Integer idArea) {
+    public Vaga(double latitude, double longitude, Boolean ocupado, String tipo, Integer idArea) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.ocupado = ocupado;
         this.tipo = tipo;
         this.idArea = idArea;
     }
-
-    public Vaga(){
-    }
     
+    public Vaga(){
+        
+    }
 
-    public Long getLatitude() {
+
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Long latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public Long getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Long longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
 
