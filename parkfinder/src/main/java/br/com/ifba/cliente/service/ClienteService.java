@@ -39,28 +39,15 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public boolean findByUsername(String email) {
-      Cliente cliente = usuarioDAO.findByUsername(email);
+    public Cliente findByUsername(String email) {
+      return usuarioDAO.findByUsername(email);
 
-        if (cliente.getId()!=null){
-            return true;
-            
-        }else{
-            return false;
-        }
     }
 
 
     @Override
-    public boolean checkLoginCliente(String email, String senha) {
-        Cliente cliente = usuarioDAO.checkLogin(email, senha);
-
-        if (cliente.getId()!=null){
-            return true;
-
-        }else{
-            return false;
-        }
+    public Cliente checkLoginCliente(String email, String senha) {
+        return usuarioDAO.checkLogin(email, senha);
 
         
     }

@@ -16,6 +16,4 @@ public interface IClienteDAO extends JpaRepository<Cliente, Long>{
         @Query("select i from Cliente i where i.email = :email")
          public Cliente findByUsername(String email);
      
-  
- 
 }
