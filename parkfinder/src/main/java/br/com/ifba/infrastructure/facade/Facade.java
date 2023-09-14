@@ -52,6 +52,11 @@ public class Facade implements IFacade {
     public Cliente findByUsernameCliente(String username) {
         return clienteService.findByUsername(username);
     }
+    
+    @Override
+    public void updatePassword(Long id, String senha){
+        clienteService.updatePassword(id, senha);
+    }
 
     // VAGA
     @Autowired

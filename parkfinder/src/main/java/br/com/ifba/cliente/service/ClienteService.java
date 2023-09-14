@@ -46,5 +46,10 @@ public class ClienteService implements IClienteService {
     public Cliente checkLoginCliente(String email, String senha) {
         return usuarioDAO.checkLogin(email, senha);
     }
+    
+    @Override
+    public void updatePassword(Long id, String senha) {
+     usuarioDAO.updatePassword(id,senha);
+    }
 }
 

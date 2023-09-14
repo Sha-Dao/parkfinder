@@ -14,5 +14,6 @@ public interface IClienteService {
     public List<Cliente> findAllCliente();
     public Cliente checkLoginCliente(String email, String senha);
     public Cliente findByUsername(String email);
+    public void updatePassword (Long id, String senha);
     
 }

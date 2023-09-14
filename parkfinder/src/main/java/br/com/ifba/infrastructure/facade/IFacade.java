@@ -13,6 +13,7 @@ public interface IFacade {
     List<Cliente> findAllCliente();
     Cliente checkLoginCliente(String username, String password);
     Cliente findByUsernameCliente(String username);
+    void updatePassword(Long id, String password);
 
     // Vaga
     void saveVaga(Vaga vaga);
