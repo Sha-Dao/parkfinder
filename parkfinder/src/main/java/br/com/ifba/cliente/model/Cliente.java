@@ -2,13 +2,18 @@ package br.com.ifba.cliente.model;
 
 import br.com.ifba.infrastructure.model.PersistenceEntity;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Collections;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 
 @Entity
 @Table(name = "Cliente")
-public class Cliente extends PersistenceEntity implements Serializable{
+public class Cliente extends PersistenceEntity implements Serializable, UserDetails{
     
     private String nome;
     private String email;
@@ -65,6 +70,42 @@ public class Cliente extends PersistenceEntity implements Serializable{
 
     public void setLongitude(double longitude) {
         this.longitude = longitude;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+      return Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER"));
+}
+
+
+    @Override
+    public String getPassword() {
+        return senha;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+           return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+           return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+           return true;
     }
 
 
