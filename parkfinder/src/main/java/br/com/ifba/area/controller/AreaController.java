@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class AreaController {
     
-       @Autowired
+    @Autowired
     private IFacade ifacadedao;
        
     @GetMapping()
