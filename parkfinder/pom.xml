@@ -61,6 +61,10 @@
 	  <version>5.3.29</version>
 	  <type>jar</type>
 	 </dependency>
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
