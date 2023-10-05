@@ -24,7 +24,7 @@ public class Vaga extends PersistenceEntity {
         this.tipo = tipo;
         this.idArea = idArea;
     }
-   
+    
     public Vaga(){
         
     }

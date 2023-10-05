@@ -16,15 +16,15 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Area")
 public class Area extends PersistenceEntity {
-    private double raio;
+    private String descricao;
     private double latitude;
     private double longitude;
 
     public Area() {
     }
 
-    public Area(double raio, double latitude, double longitude) {
-        this.raio = raio;
+    public Area(String descricao, double latitude, double longitude) {
+        this.descricao = descricao;
         this.latitude = latitude;
         this.longitude = longitude;
     }
@@ -32,12 +32,12 @@ public class Area extends PersistenceEntity {
 
 
 
-    public double getRaio() {
-        return raio;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setRaio(double raio) {
-        this.raio = raio;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public double getLatitude() {
