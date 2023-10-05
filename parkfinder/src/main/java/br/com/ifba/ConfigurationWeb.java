@@ -44,6 +44,8 @@ public class ConfigurationWeb {
                 .permitAll()
                 .antMatchers(HttpMethod.GET, "/vaga")
                 .permitAll()
+                .antMatchers(HttpMethod.GET, "/area")
+                .permitAll()
                 .antMatchers(HttpMethod.POST, "/check-email")
                 .permitAll()
                 .antMatchers(HttpMethod.POST, "/salvar-cliente")
