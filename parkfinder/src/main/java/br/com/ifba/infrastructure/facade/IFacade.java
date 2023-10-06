@@ -18,7 +18,7 @@ public interface IFacade {
     // Vaga
     void saveVaga(Vaga vaga);
     void deleteVaga(Vaga vaga);
-    Vaga updateVaga(Vaga vaga);
+    void updateVaga(Long id, Boolean ocupado);
     void manipularEstadoVaga(Vaga vaga);
     List<Vaga> findAllVaga();
 

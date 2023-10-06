@@ -73,8 +73,8 @@ public class Facade implements IFacade {
     }
 
     @Override
-    public Vaga updateVaga(Vaga vaga) {
-        return vagaService.updateVaga(vaga);
+    public void updateVaga(Long id, Boolean ocupado) {
+        vagaService.updateVaga(id, ocupado);
     }
 
     @Override

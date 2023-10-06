@@ -17,7 +17,7 @@ public interface IVagaService {
     
     public Vaga saveVaga(Vaga vaga);
     public void deleteVaga(Vaga vaga);
-    public Vaga updateVaga(Vaga vaga);
+    public void updateVaga(Long id, Boolean ocupado);
     public List<Vaga> findAllVaga();
     public void manipularEstadoVaga(Vaga vaga);
 

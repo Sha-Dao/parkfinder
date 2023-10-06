@@ -13,6 +13,7 @@ import br.com.ifba.cliente.recovery.RecuperacaoService;
 import br.com.ifba.infrastructure.util.Session;
 import br.com.ifba.authentication.service.TokenService;
 import java.util.List;
+import br.com.ifba.vaga.model.Vaga;
 import java.util.Random;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,8 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class ClienteController {
     
-
+    private Vaga vaga;
+    
     @Autowired
     private IFacade ifacadedao;
     
@@ -101,6 +103,8 @@ public ResponseEntity<String> salvar(@RequestBody Cliente cliente) {
     }
     return ResponseEntity.ok("ok");
 }
+
+
 
 
 

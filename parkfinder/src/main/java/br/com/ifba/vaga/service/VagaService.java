@@ -27,8 +27,14 @@ public class VagaService implements IVagaService {
     }
 
     @Override
-    public Vaga updateVaga(Vaga vaga) {
-        return vagaDAO.save(vaga);
+    public void updateVaga(Long id, Boolean ocupado) {
+        try{
+        vagaDAO.updateVaga(id, ocupado);
+            System.out.println("deu certo"+id + ocupado);
+        }catch (Exception e){
+            System.out.println(e);
+        
+        }
     }
 
     @Override
