@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("*")
 public class VagaController {
     
-       @Autowired
+    @Autowired
     private IFacade ifacadedao;
        
     @GetMapping("/vaga")
